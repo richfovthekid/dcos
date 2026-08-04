@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziyue Liu - Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --border-color: #334155;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+            color: var(--text-main);
+        }
+        .subtitle {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .bio {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        section h2 {
+            font-size: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-color);
+        }
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #f1f5f9;
+        }
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .case-section {
+            margin-top: 10px;
+            padding-left: 12px;
+            border-left: 2px solid var(--accent-color);
+        }
+        .case-section p {
+            margin: 6px 0;
+            font-size: 0.88rem;
+        }
+        .case-label {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .tag {
+            background-color: #0369a1;
+            color: #e0f2fe;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .media-container {
+            width: 100%;
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: #000;
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+        }
+        .media-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .sop-links {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 12px;
+            background-color: rgba(15, 23, 42, 0.6);
+            border-radius: 6px;
+            border: 1px dashed var(--border-color);
+        }
+        .sop-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.88rem;
+            display: inline-block;
+            margin: 4px 0;
+        }
+        .sop-links a:hover {
+            text-decoration: underline;
+        }
+        .zh-text {
+            display: block;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        @media (max-width: 600px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 个人头部信息 / Header -->
+        <header>
+            <h1>Ziyue Liu <span style="font-size: 1.5rem; color: var(--text-muted); font-weight: normal;">(刘子跃)</span></h1>
+            <div class="subtitle">Computer Science Undergraduate & Software/Prototyping Intern <span class="zh-text">计算机科学本科生 & 软件与原型开发实习生</span></div>
+            <div class="bio">
+                Passionate about software development, IoT systems, human-AI collaborative workflows, and robust engineering problem-solving.
+                <span class="zh-text">专注于软件开发、物联网系统、人机协同工作流以及工程问题的高效攻关。</span>
+            </div>
+        </header>
+
+        <!-- 核心工业项目板块 / Featured Industry Experience -->
+        <section>
+            <h2>Featured Industry Experience <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 核心工业实习经历</span></h2>
+
+            <div class="project-card">
+                <h3 class="project-title">Commercial Cleaning Robot Aging Test Client <span class="zh-text" style="display:inline; font-size:1rem; color:var(--text-muted); font-weight:normal;">/ 商用清洁机器人老化测试客户端系统</span></h3>
+                <div class="project-desc">
+                    Developed a client workflow system for automated robot aging tests during the internship, integrating frontend UI prototyping and standard operating procedure (SOP) documentation.
+                    <span class="zh-text">实习期间参与开发商用清洁机器人自动化老化测试客户端工作流系统，整合前端 UI 原型设计与标准作业程序（SOP）文档编写。</span>
+                </div>
+                
+                <!-- 视频展示 / Video Preview -->
+                <div class="media-container">
+                    <video controls muted>
+                        <source src="aging-test-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- SOP 快速通道（已更新纯英文路径） / SOP Documents Link -->
+                <div class="sop-links">
+                    <p style="margin: 0 0 8px 0; font-size: 0.9rem; font-weight: 600; color: #f1f5f9;">
+                        Associated SOP Documents (GitHub) <span style="font-weight: normal; color: var(--text-muted);">/ 配套 SOP 标准作业程序文档</span>:
+                    </p>
+                    <div style="margin-bottom: 6px;">
+                        📄 <a href="https://github.com/richfovthekid/dcos/blob/main/bushing-sop.pdf" target="_blank">
+                            Bushing & Pipe Fitting Assembly SOP
+                        </a>
+                        <span class="zh-text">衬套与管件装配标准作业程序</span>
+                    </div>
+                    <div>
+                        📄 <a href="https://github.com/richfovthekid/dcos/blob/main/assembly-sop.pdf" target="_blank">
+                            Equipment Component Assembly SOP
+                        </a>
+                        <span class="zh-text">设备部件装机标准作业程序</span>
+                    </div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">UI Prototyping</span>
+                    <span class="tag">AI-Assisted Dev</span>
+                    <span class="tag">SOP Documentation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 硬核排错与架构案例板块 / Engineering Debug & Architecture Case Studies -->
+        <section>
+            <h2>Engineering Debug & Architecture Case Studies <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 工程排错与架构优化案例</span></h2>
+
+            <!-- 案例 1 / Case 1 -->
+            <div class="project-card">
+                <h3 class="project-title">1. AI Agent Function Calling Route Fallback Bug <span class="zh-text" style="display:inline; font-size:1rem; color:var(--text-muted); font-weight:normal;">/ AI 智能体函数调用路由降级缺陷修复</span></h3>
+                <div class="project-desc">
+                    <div class="case-section">
+                        <p><span class="case-label">Background / 背景:</span> AI assistant lacked the "create order" tool but failed to intercept gracefully, forcing structured order data into a regular "task" template and causing cross-module data confusion. <span class="zh-text">AI 助手缺失“创建订单”工具时未能优雅拦截，导致结构化订单数据被强行塞入常规“任务”模板，引发跨模块数据混淆。</span></p>
+                        <p><span class="case-label">Root Cause / 根因:</span> Function Calling scope lacked registration for the tool. Without fallback logic, the model appended raw parameters into the description field and downgraded execution. <span class="zh-text">Function Calling 作用域未注册该工具，且缺少兜底拦截逻辑，致使模型将原始参数拼入描述字段并降级执行。</span></p>
+                        <p><span class="case-label">Fix & Validation / 修复与验证:</span> Registered the order tool chain in the backend and refined the System Prompt to enforce strict boundary interception and rejection logic. <span class="zh-text">后端补全订单工具链注册，并优化系统提示词（System Prompt），强制执行严格的边界拦截与拒绝逻辑。</span></p>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">Function Calling</span>
+                    <span class="tag">Intent Routing</span>
+                </div>
+            </div>
+
+            <!-- 案例 2 / Case 2 -->
+            <div class="project-card">
+                <h3 class="project-title">2. State Machine Missing Enum Validation & Flow Defect <span class="zh-text" style="display:inline; font-size:1rem; color:var(--text-muted); font-weight:normal;">/ 状态机缺少枚举校验与流转缺陷修复</span></h3>
+                <div class="project-desc">
+                    <div class="case-section">
+                        <p><span class="case-label">Background / 背景:</span> Project task state change interfaces lacked defensive logic; closed tasks could be illegally reversed to pending, and non-standard strings were accepted by the database. <span class="zh-text">项目任务状态变更接口缺乏防御性逻辑，已关闭任务可被非法逆向回滚至待处理状态，且数据库接收了非标字符串。</span></p>
+                        <p><span class="case-label">Root Cause / 根因:</span> Controller/DTO layers lacked Enum whitelist verification, and the underlying Service lacked a state machine transition map, leaving constraints unprotected. <span class="zh-text">Controller/DTO 层缺少枚举白名单校验，底层 Service 缺少状态机流转图谱，约束形同虚设。</span></p>
+                        <p><span class="case-label">Fix & Validation / 修复与验证:</span> Implemented hardcoded Enum whitelist protection at the DTO layer (returning 400 Bad Request for invalid inputs) and introduced a state machine validator to block terminal state reversals. <span class="zh-text">在 DTO 层落地硬编码枚举白名单保护（非法输入直接返回 400 Bad Request），引入状态机校验器拦截终态逆向。</span></p>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">State Machine</span>
+                    <span class="tag">Enum Validation</span>
+                    <span class="tag">API Security</span>
+                </div>
+            </div>
+
+            <!-- 案例 3 / Case 3 -->
+            <div class="project-card">
+                <h3 class="project-title">3. ORM Mapping Deadlock Caused by Unvalidated Inputs <span class="zh-text" style="display:inline; font-size:1rem; color:var(--text-muted); font-weight:normal;">/ 未校验输入导致的 ORM 映射死锁修复</span></h3>
+                <div class="project-desc">
+                    <div class="case-section">
+                        <p><span class="case-label">Background / 背景:</span> Order creation allowed non-numeric text (e.g., "abc") to be stored. Subsequent edits caused the system to frequently crash and deadlock due to type conversion failures. <span class="zh-text">订单创建允许存入非数字文本（如 "abc"），后续编辑时系统因类型转换失败频繁崩溃死锁。</span></p>
+                        <p><span class="case-label">Root Cause / 根因:</span> Table fields were defined as VARCHAR. During updates, the ORM pre-loaded entities and threw a NumberFormatException when mapping "abc" to an Integer field during the read phase, blocking writes. <span class="zh-text">表字段定义为 VARCHAR，更新时 ORM 预加载实体并在读阶段将 "abc" 映射至 Integer 字段抛出 NumberFormatException 导致写阻塞。</span></p>
+                        <p><span class="case-label">Fix & Validation / 修复与验证:</span> Corrected the database schema to INT, added @Min(1) validation in the backend DTO, and enforced frontend type and regex limits to establish a three-tier closed-loop protection. <span class="zh-text">修正数据库表结构为 INT，后端 DTO 增加 @Min(1) 校验，前端同步限定类型与正则，构建三层防御闭环。</span></p>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">ORM Mapping</span>
+                    <span class="tag">Data Lifecycle</span>
+                    <span class="tag">Defensive Programming</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学校与精选小项目 / Academic & Practical Works -->
+        <section>
+            <h2>Academic & Practical Works <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">/ 学术与实战小项目</span></h2>
+
+            <div class="grid-2">
+                <div class="project-card">
+                    <h3 class="project-title" style="font-size: 1.1rem;">Java Music Asset Application <span class="zh-text" style="display:inline; font-size:0.9rem; color:var(--text-muted); font-weight:normal;">/ Java 音乐资产管理应用</span></h3>
+                    <div class="project-desc">
+                        Built a desktop media utility leveraging Java and GUI components, implementing object-oriented programming principles.
+                        <span class="zh-text">利用 Java 及 GUI 组件构建桌面端多媒体工具，深入实践面向对象编程原则。</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Java Swing</span>
+                        <span class="tag">OOP</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title" style="font-size: 1.1rem;">Web Programming & Database Forms <span class="zh-text" style="display:inline; font-size:0.9rem; color:var(--text-muted); font-weight:normal;">/ Web 编程与数据库表单</span></h3>
+                    <div class="project-desc">
+                        Developed full-stack basic web applications involving user input calculations and database interactions.
+                        <span class="zh-text">开发包含用户输入计算与数据库交互的全栈基础 Web 应用。</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">PHP / JavaScript</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
